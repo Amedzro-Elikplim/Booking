@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="About">
+      <Stack.Navigator initialRouteName="Book">
         <Stack.Screen name="Table booking app" component={Landing} />
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Sign up"  component={Signup} />

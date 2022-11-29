@@ -42,7 +42,7 @@ export const About = () => {
   )
 };
 
-const style = StyleSheet.create({
+export const style = StyleSheet.create({
   subContainer: {
     display: 'flex',
     flexDirection: 'row',
