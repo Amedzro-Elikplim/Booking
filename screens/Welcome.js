@@ -1,11 +1,14 @@
 import React from "react";
-import { SafeAreaView, Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import { SafeAreaView, Text, View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 export const Welcome = ({ navigation }) => {
   return (
-
-    <SafeAreaView style={style.container}>
-        <Text style={style.headerText}>THE LUNCH HUB</Text>
-        <Text style={{color: 'white'}}>DISCOVER OUR AMAZING AND DELICIOUS MEALS</Text>
+   
+     <SafeAreaView style={style.container}>
+       <ScrollView contentContainerStyle={style.container}>
+        <View style={style.topView}>
+          <Text style={style.headerText}>THE LUNCH HUB</Text>
+          <Text style={{color: 'white', fontSize: 10}}>DISCOVER OUR AMAZING AND DELICIOUS MEALS</Text>
+        </View>
 
         <View style={style.btnContainer}>
 
@@ -18,6 +21,7 @@ export const Welcome = ({ navigation }) => {
           </TouchableOpacity>
 
         </View>
+        </ScrollView>
     </SafeAreaView>
   
   )
@@ -25,23 +29,27 @@ export const Welcome = ({ navigation }) => {
 
 const style = StyleSheet.create({
   container: {
-    display: 'flex',
-    flexDirection: 'column',
+    flex: 1,
     alignItems: 'center',
     backgroundColor: '#000000FF',
-    flex: 1
+  },
+
+  topView: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 0.4,
   },
 
   btnContainer: {
     marginTop: 15,
-    display: 'flex',
-    flexDirection: "column",
-    minWidth: 320
+    minWidth: 320,
+    flex: 0.6,
+    justifyContent: "center"
   },
 
   headerText: {
     color: 'white',
-    fontSize: 22
+    fontSize: 40
   },
   signInbtn: {
     borderWidth: 1,

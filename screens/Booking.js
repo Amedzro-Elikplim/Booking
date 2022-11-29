@@ -33,10 +33,10 @@ export const Booking = () => {
 
       <View style={style.dropdownContainer}>
         <DropDownPicker
-          open={IsDateOpen}
+          open={setIsDateOpen}
           value={dateValue}
           items={dateItems}
-          setOpen={IsDateOpen}
+          setOpen={setIsDateOpen}
           setValue={setDateValue}
           setItems={setDateItems}
           style={style.dropdown}

@@ -1,17 +1,20 @@
 import React from "react";
-import { SafeAreaView, Text, View, TouchableOpacity } from "react-native";
+import { SafeAreaView, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import Input from "../components/Input";
 import { style as btnStyles } from "./Signup";
+
+
 export const Login = ({ navigation }) => {
+
   return (
 
-      <SafeAreaView style={btnStyles.container}>
-        <View>
+      <SafeAreaView style={style.container}>
+        <View style={style.topView}>
           <Text style={btnStyles.title}>Welcome Back</Text>
           <Text>Sign in to continue and connect with the TLH family</Text>
         </View>
 
-        <View>
+        <View style={style.middleView}>
           <Input type="text" placeholder="Email" />
           <Input type="password" placeholder="Password" secureTextEntry={true} />
         </View>
@@ -26,3 +29,19 @@ export const Login = ({ navigation }) => {
       </SafeAreaView>
   )
 };
+
+
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center"
+  },
+  topView: {
+    flex: 0.2,
+    marginTop: 10,
+  },
+  middleView: {
+    flex: 0.6,
+    justifyContent: "center"
+  }
+})
