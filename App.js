@@ -10,10 +10,13 @@ import { About } from "./screens/About";
 import { Booking } from "./screens/Booking";
 import { Details } from "./screens/Details";
 import { ViewBooking } from "./screens/ViewBooking";
+import { LogBox } from "react-native";
 
 export default function App() {
 
   const Stack = createNativeStackNavigator();
+  LogBox.ignoreAllLogs();
+
 
   return (
     <NavigationContainer>
